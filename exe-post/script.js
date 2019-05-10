@@ -1,12 +1,11 @@
 const button = document.getElementById("send_form");
 
 button.addEventListener("click", (evento) => {
-    // console.log("inhaí")
     evento.preventDefault();
-    
-    const nome = document.getElementById('first_name').value;
-    const sobrenome = document.getElementById('last_name').value;
-    const email = document.getElementById('email').value;
+
+    const nome = document.getElementById("first_name").value;
+    const sobrenome = document.getElementById("last_name").value;
+    const email = document.getElementById("email").value;
 
     fetch('https://reqres.in/api/users', {
         method: 'POST',
@@ -25,9 +24,13 @@ button.addEventListener("click", (evento) => {
     })
     .then((data) => {
         console.log(data);
-        document.getElementById('message').textContent = "Suuuucessu"
+        document.getElementById("message").textContent = "Sucesso!! :)"
     })
     .catch((erro) => {
-        console.log(erro);
+        console.log(erro)
     })
+
+
 })
+
+//receita(ingrediente1, ingrediente2, ingrediente3);
